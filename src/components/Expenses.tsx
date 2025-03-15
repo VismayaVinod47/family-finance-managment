@@ -171,65 +171,6 @@ const Expenses: React.FC = () => {
           <h1>Expense Tracking</h1>
         </div>
         <div className="expenses-container">
-          <div className="income-section">
-            <div className="income-header">
-              <h2>Monthly Income</h2>
-              {!isEditingIncome ? (
-                <div className="income-display">
-                  <span className="income-amount">₹{totalIncome.toLocaleString()}</span>
-                  <button onClick={handleIncomeEdit} className="edit-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                  </button>
-                </div>
-              ) : (
-                <div className="income-edit">
-                  <input
-                    type="number"
-                    value={editedIncome}
-                    onChange={(e) => setEditedIncome(e.target.value)}
-                    className="edit-input"
-                    autoFocus
-                  />
-                  <button onClick={handleIncomeSave} className="save-btn">Save</button>
-                  <button onClick={() => setIsEditingIncome(false)} className="cancel-btn">Cancel</button>
-                </div>
-              )}
-            </div>
-          </div>
-
-          <div className="category-management">
-            <div className="category-header">
-              <h2>Category Management</h2>
-              {!isAddingCategory ? (
-                <button onClick={() => setIsAddingCategory(true)} className="add-category-btn">
-                  Add New Category
-                </button>
-              ) : (
-                <div className="add-category-form">
-                  <input
-                    type="text"
-                    placeholder="Category Name"
-                    value={newCategory}
-                    onChange={(e) => setNewCategory(e.target.value)}
-                    className="category-input"
-                  />
-                  <input
-                    type="number"
-                    placeholder="Budget Amount"
-                    value={newBudget}
-                    onChange={(e) => setNewBudget(e.target.value)}
-                    className="budget-input"
-                  />
-                  <button onClick={handleAddCategory} className="save-btn">Add</button>
-                  <button onClick={() => setIsAddingCategory(false)} className="cancel-btn">Cancel</button>
-                </div>
-              )}
-            </div>
-          </div>
-
           <div className="expenses-header">
             <h2>Expense Categories</h2>
             <div className="total-summary">
