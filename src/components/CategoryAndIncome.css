@@ -1,0 +1,223 @@
+.management-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.income-section {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.income-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.income-header h2 {
+  color: #111827;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.income-display {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.income-amount {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.income-edit {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.income-summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.category-management {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.category-header h2 {
+  color: #111827;
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.add-category-btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-category-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.add-category-form {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background: #f9fafb;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.category-input, .budget-input {
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background: white;
+}
+
+.category-input {
+  width: 250px;
+}
+
+.budget-input {
+  width: 150px;
+}
+
+.category-input:focus, .budget-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.categories-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.category-card {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.category-info {
+  position: relative;
+  z-index: 1;
+}
+
+.category-info h3 {
+  color: #111827;
+  font-size: 1.25rem;
+  margin: 0 0 1rem 0;
+}
+
+.budget-info, .percentage-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.budget-info .label, .percentage-info .label {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.budget-info .value, .percentage-info .value {
+  color: #111827;
+  font-weight: 500;
+}
+
+.category-progress {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #e5e7eb;
+}
+
+.category-progress .progress-bar {
+  height: 100%;
+  background-color: #2563eb;
+  transition: width 0.3s ease;
+}
+
+.edit-input {
+  width: 200px;
+  padding: 0.75rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  font-size: 1.25rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.edit-input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.save-btn, .cancel-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.save-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.cancel-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #dc2626;
+} 

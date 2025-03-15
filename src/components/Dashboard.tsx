@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Pie, Line } from 'react-chartjs-2';
 import {
   Chart as ChartJS,
@@ -25,6 +26,8 @@ ChartJS.register(
 );
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
   const familyMembers = [
     { id: 1, name: 'Dad', imageUrl: 'https://ui-avatars.com/api/?name=Dad&background=2563eb&color=fff' },
     { id: 2, name: 'Mom', imageUrl: 'https://ui-avatars.com/api/?name=Mom&background=2563eb&color=fff' },
@@ -114,6 +117,10 @@ const Dashboard = () => {
     },
   };
 
+  const handleNavigation = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <div className="dashboard-container">
       <div className="sidebar">
@@ -121,29 +128,26 @@ const Dashboard = () => {
           <h2>Family Finance</h2>
         </div>
         <div className="nav-links">
-          <button className="nav-item active">
+          <button className="nav-item active" onClick={() => handleNavigation('/dashboard')}>
             <span className="icon">📊</span>
             <span>Dashboard</span>
           </button>
-          <button className="nav-item">
+          <button className="nav-item" onClick={() => handleNavigation('/expenses')}>
             <span className="icon">💰</span>
-            <span>Expenses</span>
+            <span>Expense Tracking</span>
           </button>
           <button className="nav-item">
             <span className="icon">📁</span>
-            <span>Categories</span>
+            <span>Category and income Management</span>
           </button>
-          <button className="nav-item">
-            <span className="icon">💵</span>
-            <span>Income</span>
-          </button>
+          
           <button className="nav-item">
             <span className="icon">👤</span>
             <span>Profile</span>
           </button>
         </div>
         <button className="sign-out">
-          <span className="icon">🚪</span>
+          <span className="icon">⬅️</span>
           <span>Sign Out</span>
         </button>
       </div>

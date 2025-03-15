@@ -142,7 +142,7 @@ const LandingPage = () => {
 
       {/* Footer */}
       <footer className="footer">
-        <p>&copy; 2024 Family Finance Management. All rights reserved.</p>
+        <p>&copy; 2025 Family Finance Management. All rights reserved.</p>
       </footer>
     </div>
   );
